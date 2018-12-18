@@ -131,16 +131,16 @@ for (let i = 0; i < locations.length; i++) {
 // The llamaNamer function defines an internal function and your job
 // is to rewrite this code so that the internal function gets returned.
 
+const possibleNames = ["Larry", "Leon", "Leona", "Les", "Laura", "Lemony", "Lars", "Lekisha"];
+const suffix = " the Llama";
 const llamaNamer = function () {
-    const possibleNames = ["Larry", "Leon", "Leona", "Les", "Laura", "Lemony", "Lars", "Lekisha"]
-    const randomizer = Math.floor(Math.random() * 7)
-
+    const randomizer = Math.floor(Math.random() * 7);
+   
     const namer = function () {
-        const suffix = " the Llama"
-        const name = possibleNames[randomizer]
-    }
-
-    return name + suffix
+        let name = possibleNames[randomizer];
+        return name;
+    }      
+    //console.log(namer());
+    return namer() + suffix;
 }
-nameMaker = llamaNamer()
-console.log(nameMaker())
+console.log(llamaNamer())
